@@ -11,22 +11,22 @@ def main():
         display_menu()
         choice = input("Enter your choice: ")
 
-        if choice == "1":
+        if choice == '1':
             # Prompt for add an item
             item = input("Enter an item: ").strip()
             shopping_list.append(item)
-        elif choice == "2":
+        elif choice == '2':
             # Prompt for and remove an item
             item = input("Enter item to be removed: ")
             try:
                 shopping_list.remove(item)
             except ValueError:
                 print("Item not found")
-        elif choice == "3":
+        elif choice == '3':
             # Display the shopping list
             for item in shopping_list:
                 print(item)
-        elif choice == "4":
+        elif choice == '4':
             print("Goodbye!")
             break
         else:
