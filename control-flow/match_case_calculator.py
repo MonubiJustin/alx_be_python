@@ -3,18 +3,22 @@ num2 = int(input("Enter the second number: "))
 operation = input("Choose the operation (+, -, *, /): ")
 
 result = 0
-if operation == '+':
-    result = num1 + num2
-elif operation == '-':
-    result = num1 - num2
-elif operation == '*':
-    result = num1 * num2
-elif operation == '/':
-    if num2 == 0:
-        print("Cannot divide by zero.")
+match operation:
+    case '+':
+        result = num1 + num2
+    case '-':
+        result = num1 - num2
+    case '*':
+        result = num1 * num2
+    case '/':
+        if num2 == 0:
+            print('Cannot divide by zero.')
+            exit()
+        else:
+            result = num1 / num2
+    case _:
+        print("Invalid operation selected. Please choose +, -, * or /.")
         exit()
-    else:
-        result = num1 / num2
 
 print(f"The result is {result}")
     
